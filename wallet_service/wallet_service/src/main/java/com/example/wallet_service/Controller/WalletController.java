@@ -44,6 +44,11 @@ public class WalletController {
         return userService.getAllUsers();
     }
 
+    @GetMapping("/wallet/getAllUsersFromOtherServiceById/{id}")
+    public User getAllUsersFromOtherServiceById(@PathVariable String id) {
+        return userService.getUserById(id);
+    }
+
    @PostMapping("/wallet/createWallet")
    @ResponseStatus(HttpStatus.CREATED)
     public Wallet createWallet(@RequestBody Wallet wallet) {

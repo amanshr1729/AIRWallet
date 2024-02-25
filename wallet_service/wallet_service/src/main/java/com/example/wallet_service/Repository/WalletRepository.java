@@ -11,4 +11,6 @@ public interface WalletRepository extends JpaRepository<Wallet, Integer> {
 
     @Query(value = "SELECT * FROM wallet w WHERE w.wallet_type= :wallet_type", nativeQuery = true)
     List<Wallet> getWalletsByWalletType(@Param("wallet_type") String wallet_type);
+
+    Wallet findWalletByUserId(int id);
 }
