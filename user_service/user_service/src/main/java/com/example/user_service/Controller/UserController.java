@@ -38,7 +38,7 @@ public class UserController {
         userToBeUpdated.setName(user.getName() != null ? user.getName() :  userToBeUpdated.getName());
         userToBeUpdated.setEmail(user.getEmail() != null ? user.getEmail() : userToBeUpdated.getEmail());
         userToBeUpdated.setPnr(user.getPnr()!= null ? user.getPnr(): userToBeUpdated.getPnr());
-        userToBeUpdated.set_kyc_done(user.is_kyc_done());
+        userToBeUpdated.setIs_kyc_done(user.getIs_kyc_done());
         return userRepository.save(userToBeUpdated);
     }
 

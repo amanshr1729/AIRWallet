@@ -1,4 +1,4 @@
-package com.example.user_service.Model;
+package com.example.wallet_service.Model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
